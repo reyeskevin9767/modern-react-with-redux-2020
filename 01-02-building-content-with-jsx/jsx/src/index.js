@@ -1,6 +1,6 @@
 //* Import the React and ReactDOM libraries
 import React from 'react';
-import React from 'react-dom';
+import ReactDOM from 'react-dom';
 
 //* Create a react component
 const App = () => {
