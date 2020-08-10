@@ -1,5 +1,6 @@
 import React from 'react';
 
+//* All of child component is kept whole when refrence by parent component
 const ApprovalCard = (props) => {
   return (
     <div className="ui card">

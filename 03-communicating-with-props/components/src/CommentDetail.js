@@ -1,5 +1,6 @@
 import React from 'react';
 
+//* Access props by setting it as a parameter, set as an object
 const CommentDetail = (props) => {
   return (
     <div className="comment">

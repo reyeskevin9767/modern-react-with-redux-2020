@@ -14,8 +14,13 @@ const App = () => {
         </div>
       </ApprovalCard>
 
+      {/* Can wrap a component around another component */}
       <ApprovalCard>
+
+        {/* Inner component is treated as a child */}
         <CommentDetail
+          
+          // Props allow data to pass from parent component to child component
           author="Sam"
           timeAgo="Today at 4:45PM"
           content="Nice blog post!"
