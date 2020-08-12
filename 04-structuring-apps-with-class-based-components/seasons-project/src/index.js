@@ -32,9 +32,9 @@ class App extends React.Component {
   //   console.log('My component was just updated - it rerenedered');
   // }
 
+  // Helper Method
   // When setstate is updated, React calls the render method again
-  // Must define render with class component
-  render() {
+  renderContent() {
     // Show just error message
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
@@ -45,7 +45,14 @@ class App extends React.Component {
       return <SeasonDisplay lat={this.state.lat} />;
     }
 
-    return <Spinner />;
+    // Return Spinner Component
+    return <Spinner message="Please Accept Location Request" />;
+  }
+
+  // Must define render with class component
+  // Border red - an example when wrapping content
+  render() {
+    return <div className="border red">{this.renderContent()}</div>;
   }
 }
 

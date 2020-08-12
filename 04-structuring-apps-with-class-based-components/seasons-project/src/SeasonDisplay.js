@@ -1,6 +1,7 @@
 import './SeasonDisplay.css';
 import React from 'react';
 
+// Better than ternary epression
 const seasonConfig = {
   summer: {
     text: "Let's hit the beach!",
@@ -12,6 +13,7 @@ const seasonConfig = {
   },
 };
 
+// Find season
 const getSeason = (lat, month) => {
   if (month > 2 && month < 9) {
     return lat > 0 ? 'summer' : 'winter';
