@@ -1,7 +1,7 @@
 import './SeasonDisplay.css';
 import React from 'react';
 
-// Better than ternary epression
+// Better than ternary expression
 const seasonConfig = {
   summer: {
     text: "Let's hit the beach!",
