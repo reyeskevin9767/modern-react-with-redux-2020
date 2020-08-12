@@ -1,16 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SeasonDisplay from './SeasonDisplay';
 
 //* Class Component
 class App extends React.Component {
-  // Initize state object
-  constructor(props) {
-    // References the parent's constuctor
-    super(props);
+  // // Initize state object
+  // constructor(props) {
+  //   // References the parent's constuctor
+  //   super(props);
 
-    // Only time for direct assignment of state
-    this.state = { lat: null, errorMessage: '' };
-  }
+  //   // Only time for direct assignment of state
+  //   this.state = { lat: null, errorMessage: '' };
+  // }
+
+  // Same as defining contructor and initizing state
+  state = { lat: null, errorMessage: '' };
 
   // Called only once when component runs first time
   componentDidMount() {
@@ -37,7 +41,7 @@ class App extends React.Component {
 
     // Show just latitude
     if (!this.state.errorMessage && this.state.lat) {
-      return <div>Latitude: {this.state.lat}</div>;
+      return <SeasonDisplay lat={this.state.lat}/>;
     }
 
     return <div>Loading</div>;
