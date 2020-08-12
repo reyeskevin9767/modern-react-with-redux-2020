@@ -8,20 +8,24 @@ class App extends React.Component {
     // References the parent's constuctor
     super(props);
 
-    // Onlt time for direct assignment of state
+    // Only time for direct assignment of state
     this.state = { lat: null, errorMessage: '' };
+  }
 
+  // Called only once when component runs first time
+  componentDidMount() {
     // Get location of user
+    // Upate state object
     window.navigator.geolocation.getCurrentPosition(
-      (position) => {
-        //Upate state object
-        this.setState({ lat: position.coords.latitude });
-      },
-      (err) => {
-        this.setState({ errorMessage: err.message });
-      }
+      (position) => this.setState({ lat: position.coords.latitude }),
+      (err) => this.setState({ errorMessage: err.message })
     );
   }
+
+  // // Function is called anytime the component renders
+  // componentDidUpdate() {
+  //   console.log('My component was just updated - it rerenedered');
+  // }
 
   // When setstate is updated, React calls the render method again
   // Must define render with class component
