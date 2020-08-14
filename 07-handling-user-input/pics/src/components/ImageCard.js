@@ -5,13 +5,17 @@ class ImageCard extends React.Component {
     super(props);
 
     this.state = { spans: 0 };
+
+    // Reference DOM elements
     this.imageRef = React.createRef();
   }
 
+  // Get image reference after page has loaded
   componentDidMount() {
     this.imageRef.current.addEventListener('load', this.setSpans);
   }
 
+  // Set how many rows an image takes up
   setSpans = () => {
     const height = this.imageRef.current.clientHeight;
 
