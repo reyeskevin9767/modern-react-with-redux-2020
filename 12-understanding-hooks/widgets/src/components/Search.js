@@ -27,7 +27,10 @@ const Search = () => {
           srsearch: debouncedTerm,
         },
       });
-
+      
+      if (window.location.pathname !== '/list') {
+        return;
+      }
       setResults(data.query.search);
     };
 
