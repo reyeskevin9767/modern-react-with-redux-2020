@@ -24,14 +24,16 @@ const Search = () => {
           list: 'search',
           origin: '*',
           format: 'json',
-          srsearch: term,
+          srsearch: debouncedTerm,
         },
       });
 
       setResults(data.query.search);
     };
 
-    search();
+    if (debouncedTerm) {
+      search();
+    }
   }, [debouncedTerm]);
 
   const renderedResults = results.map((result) => {
