@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const KEY = 'AIzaSyBk7XyLlKe3Umot4skHes1WaahS8YFbJUE';
+const KEY = process.env.REACT_APP_YOUTUBE_KEY;
 
 export const baseParams = {
   part: 'snippet',
