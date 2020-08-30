@@ -35,6 +35,7 @@ const mapStateToProps = (state) => {
 
 // Need conenct to get data from state
 // Config connect with mapStateToProps and link to SongList component
+// Connect passesing function into dispatch
 export default connect(mapStateToProps, { selectSong })(SongList);
 
 // this.props === {songs: state.songs}
