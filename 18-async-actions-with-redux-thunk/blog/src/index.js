@@ -11,6 +11,11 @@ import thunk from 'redux-thunk';
 import App from './components/App';
 import reducers from './reducers';
 
+// Middleware in Redux
+// Function that gets called with every action we dispatch
+// Hass the ability to stop, modify, or otherwise mess with action
+// Middleware deals with async actions
+
 const store = createStore(reducers, applyMiddleware(thunk));
 
 ReactDOM.render(

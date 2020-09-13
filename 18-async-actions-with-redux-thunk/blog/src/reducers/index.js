@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 
 export default combineReducers({
-  replace: () => 'hi there',
+  // Trick redux into a valid reducer
+  replaceME: () => 'hi there',
 });
